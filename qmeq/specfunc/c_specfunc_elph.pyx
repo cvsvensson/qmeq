@@ -11,6 +11,7 @@ cimport cython
 
 cdef double_t pi = 3.14159265358979323846
 from libc.math cimport exp
+from libc.math cimport expm1
 from libc.math cimport log
 
 
