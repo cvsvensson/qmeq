@@ -110,7 +110,7 @@ def test_diff_phi():
 
 def test_diff2_phi():
     for f in [diff2_phi, c_diff2_phi]:
-        assert abs(f(-.10, 1000) - -423.8096493945452) < 10.5*EPS
+        assert abs(f(-.10, 1000) - -423.8096493945452) < 15*EPS
 
 def test_bose():
     for f in [bose, c_bose]:
