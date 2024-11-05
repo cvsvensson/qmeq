@@ -23,7 +23,7 @@ cdef class Func:
 cdef class FuncBose:
     """Bose function."""
     cdef double_t eval(self, double_t x):
-        return 1./(exp(x)-1.)
+        return 1./(expm1(x))
 
 
 @cython.cdivision(True)

@@ -1,7 +1,8 @@
 """Module containing various special functions."""
 
-from scipy import pi
-from scipy import exp
+from scipy.constants import pi
+from numpy import exp
+from numpy import expm1
 from scipy.integrate import quad
 
 
@@ -18,7 +19,7 @@ class Func(object):
 class FuncBose(Func):
     """Bose function."""
     def eval(self, x):
-        return 1/(exp(x)-1)
+        return 1/(expm1(x))
 
 
 class FuncPauliElPh(object):
