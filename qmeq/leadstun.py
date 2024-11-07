@@ -284,7 +284,7 @@ def make_tleads_dict(tleads, si, add_zeros=False):
     else:
         return {}
     #
-    if si.symmetry is 'spin':
+    if si.symmetry == 'spin':
         tleads_dict_spin = dict(tleads_dict)
         for j0 in tleads_dict:
             j1, j2 = j0
@@ -356,7 +356,7 @@ def make_array(lst_old, lst, si, npar=None, use_symmetry=True):
     else:
         lst_arr = np.zeros(npar, dtype=doublenp)
     #
-    if si.symmetry is 'spin' and use_symmetry:
+    if si.symmetry == 'spin' and use_symmetry:
         return np.concatenate((lst_arr, lst_arr))
     else:
         return lst_arr

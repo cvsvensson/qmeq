@@ -164,7 +164,7 @@ def make_velph_dict(velph, si, add_zeros=False):
     else:
         velph_dict = {}
     #
-    if si.symmetry is 'spin':
+    if si.symmetry == 'spin':
         velph_dict_spin = dict(velph_dict)
         for j0 in velph_dict:
             j1, j2, j3 = j0
