@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e -x
 
-ln -sf /usr/local/bin/gcc-10 /usr/local/bin/gcc
-brew install libomp
+brew install gcc
+make CXX=g++-14 CC=gcc-14
+ln -sf /usr/local/bin/gcc-14 /usr/local/bin/gcc
 gcc --version
