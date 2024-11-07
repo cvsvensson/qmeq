@@ -111,8 +111,7 @@ cdef double_t bose(double_t x, double_t sign=1) nogil:
     """Calculates the Bose distribution function at x."""
     if x > 709.77: #To avoid overflow in the denominator.
         return 0.0
-    cdef double_t e = exp( sign * x )
-    return 1.0 / (e - 1.0)
+    return 1.0 / (expm1( sign * x ))
 
 
 @cython.cdivision(True)

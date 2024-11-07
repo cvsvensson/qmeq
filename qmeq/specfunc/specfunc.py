@@ -236,8 +236,7 @@ def bose(x, sign=1):
     """
     if x > 709.77:  # To avoid overflow in the denominator
         return 0.0
-    e = np.exp(sign * x)
-    return 1 / (e - 1)
+    return 1 / (np.expm1(sign * x))
 
 @lru_cache(MAX_CACHE)
 def digamma(z):
